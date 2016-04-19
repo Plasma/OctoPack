@@ -9,7 +9,7 @@ namespace OctoPack.Tasks.Util
 
         DeletionOptions()
         {
-            SleepBetweenAttemptsMilliseconds = 100;
+            SleepBetweenAttemptsMilliseconds = 1000;
         }
 
         public int RetryAttempts { get; private set; }
