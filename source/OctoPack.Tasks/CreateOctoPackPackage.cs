@@ -231,7 +231,7 @@ namespace OctoPack.Tasks
         {
             var temp = Path.Combine(ProjectDirectory, "obj", name);
             LogMessage("Create directory: " + temp, MessageImportance.Low);
-            fileSystem.PurgeDirectory(temp, DeletionOptions.TryThreeTimes);
+            fileSystem.PurgeDirectory(temp, DeletionOptions.TryManyTimes);
             fileSystem.EnsureDirectoryExists(temp);
             fileSystem.EnsureDiskHasEnoughFreeSpace(temp);
             return temp;

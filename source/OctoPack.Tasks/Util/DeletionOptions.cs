@@ -6,6 +6,7 @@ namespace OctoPack.Tasks.Util
     {
         public static DeletionOptions TryThreeTimes { get { return new DeletionOptions { RetryAttempts = 3, ThrowOnFailure = true };}}
         public static DeletionOptions TryThreeTimesIgnoreFailure { get { return new DeletionOptions { RetryAttempts = 3, ThrowOnFailure = false };}}
+		public static DeletionOptions TryManyTimes { get { return new DeletionOptions { RetryAttempts = 60, ThrowOnFailure = true }; } }
 
         DeletionOptions()
         {
